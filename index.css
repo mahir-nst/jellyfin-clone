@@ -159,7 +159,9 @@ h2 {
 
 #next-up .media-box {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 25px;
     width: 320px;
     height: 180px;
@@ -170,7 +172,42 @@ h2 {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Add hover effect (darken and glow) */
+/* Play button */
+#next-up .media-box::after {
+    content: "▶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    z-index: 2;
+    cursor: pointer;
+    pointer-events: none; /* Initially disable pointer events */
+}
+
+/* Show play button on hover */
+#next-up .media-box:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto; /* Enable pointer events on hover */
+}
+
+/* Play button hover effect */
+#next-up .media-box:hover::after:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    background-color: rgba(20, 104, 83, 0.75);
+    box-shadow: 0 0 15px 1px rgba(20, 104, 83, 0.75);
+}
+
+/* Darkening overlay on hover */
 #next-up .media-box::before {
     content: "";
     position: absolute;
@@ -181,17 +218,19 @@ h2 {
     background-color: rgba(0, 0, 0, 0);
     border-radius: 15px;
     transition: background-color 0.2s ease;
-    z-index: 2;  /* Ensure the overlay appears on top */
+    z-index: 1;
 }
 
+/* Box hover effects */
 #next-up .media-box:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 15px 1px rgba(20, 104, 83, 0.75);
 }
 
 #next-up .media-box:hover::before {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+
 
 /* Media Title */
 #next-up .media-info {
@@ -218,7 +257,7 @@ h2 {
     margin-top: 35px;
 }
 
-
+/* Specific background images for the media boxes */
 #movies-next {
     background-image: url('images/interstellar-5fcd3f93a96bc.jpg');
 }
@@ -435,3 +474,4 @@ h2 {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
