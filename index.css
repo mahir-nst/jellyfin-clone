@@ -1,0 +1,437 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('images/harry-potter-and-the-deathly-hallows-part-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    text-align: left;
+    margin: 20px 20px 20px 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: rgb(89, 131, 195);
+}
+
+nav ul li a:focus {
+    outline: 2px solid rgb(89, 131, 195);
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+#my-media {
+    text-align: left;
+    margin: 20px 0 20px 20px;
+    color: white;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+.media-box {
+    width: 320px;
+    height: 180px;
+    background-color: #333;
+    color: white;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    border-radius: 15px;
+    margin-right: 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.media-box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#movies, #tv-shows {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+}
+
+#movies {
+    background-image: url('images/harry-potter-and-the-deathly-hallows-part-2-50536b5332893.jpg');
+}
+
+#tv-shows {
+    background-image: url('images/peaky-blinders-59fa63c3a076d.jpg');
+}
+
+#movies::before, #tv-shows::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+}
+
+#movies:hover, #tv-shows:hover {
+    transform: scale(1.03);
+}
+
+#movies:hover::before, #tv-shows:hover::before {
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px 1px rgba(20, 104, 83, 0.75);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .media-box {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Next Up Section */
+#next-up {
+    text-align: left;
+    margin: 40px 0 20px 20px;
+    color: white;
+}
+
+#next-up .media-box {
+    position: relative;
+    display: inline-block;
+    margin-right: 25px;
+    width: 320px;
+    height: 180px;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Add hover effect (darken and glow) */
+#next-up .media-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+    z-index: 2;  /* Ensure the overlay appears on top */
+}
+
+#next-up .media-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px 1px rgba(20, 104, 83, 0.75);
+}
+
+#next-up .media-box:hover::before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Media Title */
+#next-up .media-info {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+}
+
+#next-up .media-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    margin-top: 10px;
+}
+
+#next-up .media-description {
+    font-size: 12px;
+    color: rgb(182, 182, 182);
+    margin-top: 35px;
+}
+
+
+#movies-next {
+    background-image: url('images/interstellar-5fcd3f93a96bc.jpg');
+}
+
+#tv-shows-next {
+    background-image: url('images/game-of-thrones-4f78ce73d617c.jpg');
+}
+
+/* Responsive Design for Next Up section */
+@media (max-width: 768px) {
+    #next-up .media-box {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Recently added Movies section */
+#recently-added-movies {
+    margin-top: 100px;
+    color: white;
+    margin-left: 20px;
+}
+
+#recently-added-movies h2 {
+    margin-bottom: 20px;
+}
+
+#recently-added-movies .media-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    align-items: flex-start;
+    min-height: 320px;
+}
+
+#recently-added-movies .media-box {
+    position: relative;
+    display: inline-block;
+    width: 170px;
+    height: 250px;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: visible;
+    margin-right: 25px;
+}
+
+#recently-added-movies .media-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+    z-index: 2;  /* Ensure the overlay appears on top */
+}
+
+#recently-added-movies .media-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px 1px rgba(20, 104, 83, 0.75);
+}
+
+#recently-added-movies .media-box:hover::before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#recently-added-movies .poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+    z-index: 1;  /* Ensure the image stays behind the overlay */
+}
+
+#recently-added-movies .media-info {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+#recently-added-movies .media-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+#recently-added-movies .media-year {
+    font-size: 12px;
+    color: rgb(182, 182, 182);
+    margin-top: 25px;
+}
+
+#recently-added-movies .media-container::-webkit-scrollbar {
+    display: none;
+}
+
+#recently-added-movies .media-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+/* Recently added TV Shows section */
+#recently-added-tv-shows {
+    margin-top: 30px; 
+    color: white;
+    margin-left: 20px;
+}
+
+#recently-added-tv-shows h2 {
+    margin-bottom: 20px;
+}
+
+#recently-added-tv-shows .media-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px; 
+    align-items: flex-start;
+    min-height: 320px;
+}
+
+#recently-added-tv-shows .media-box {
+    position: relative;
+    display: inline-block;
+    width: 170px;
+    height: 250px;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    overflow: visible;
+    margin-right: 25px;
+}
+
+#recently-added-tv-shows .media-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+    z-index: 2;  /* Ensure the overlay appears on top */
+}
+
+#recently-added-tv-shows .media-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px 1px rgba(20, 104, 83, 0.75); 
+}
+
+#recently-added-tv-shows .media-box:hover::before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#recently-added-tv-shows .poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+    z-index: 1;  /* Ensure the image stays behind the overlay */
+}
+
+#recently-added-tv-shows .media-info {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+#recently-added-tv-shows .media-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+#recently-added-tv-shows .media-year {
+    font-size: 12px;
+    color: rgb(182, 182, 182);
+    margin-top: 25px;
+}
+
+#recently-added-tv-shows .media-container::-webkit-scrollbar, #recently-added-movies .media-container::-webkit-scrollbar {
+    display: none;
+}
+
+#recently-added-tv-shows .media-container, #recently-added-movies .media-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
