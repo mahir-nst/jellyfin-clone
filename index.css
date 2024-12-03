@@ -1,3 +1,45 @@
+/* Universal hover elements */
+.hover-element {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 3;
+    color: white;
+    position: absolute;
+}
+
+.media-box:hover .hover-element {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Play button styles */
+.play-button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 30px;
+}
+
+.media-box:hover .play-button {
+    transform: translate(-50%, -50%) scale(1);
+    cursor: pointer;
+}
+
+/* Icons container styles */
+.icons-container {
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.icons-container i {
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -220,7 +262,6 @@ h2 {
     margin-top: 35px;
 }
 
-
 #movies-next {
     background-image: url('images/interstellar-5fcd3f93a96bc.jpg');
 }
@@ -338,7 +379,6 @@ h2 {
     scrollbar-width: none;
 }
 
-
 /* Recently added TV Shows section */
 #recently-added-tv-shows {
     margin-top: 30px; 
@@ -437,4 +477,5 @@ h2 {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 
