@@ -20,10 +20,13 @@
     transform: translate(-50%, -50%) scale(0);
     font-size: 30px;
 }
+.play-button:hover{
+    color: rgb(102, 126, 222);
+    cursor: pointer;
+}
 
 .media-box:hover .play-button {
     transform: translate(-50%, -50%) scale(1);
-    cursor: pointer;
     opacity: 0.8;
 }
 
@@ -37,9 +40,12 @@
 
 .icons-container i {
     font-size: 20px;
-    cursor: pointer;
     opacity: 0.8;
     
+}
+.icons-container i:hover{
+    color: rgb(102, 126, 222);
+    cursor: pointer;
 }
 
 /* Keyframes for background image rotation */
@@ -96,25 +102,31 @@ body {
 }
 
 .header-icons-right i {
-    font-size: 24px; /* Size of the icons */
-    cursor: pointer;
+    font-size: 20px; 
     color: white;
+}
+.header-icons-right i:hover{
+    color: rgb(102, 126, 222);
+    cursor: pointer;
 }
 
 .header-icons {
     display: flex;
     align-items: center;
-    gap: 20px; /* Space between icons */
+    gap: 20px; 
 }
 
 .header-icons i {
-    font-size: 24px; /* Size of the hamburger icon */
-    cursor: pointer;
+    font-size: 20px; 
     color: white;
+}
+.header-icons i:hover{
+    color: rgb(102, 126, 222);
+    cursor: pointer;
 }
 
 .jellyfin-icon {
-    width: 30px; /* Adjust size as needed */
+    width: 25px; 
     height: auto;
 }
 
@@ -129,11 +141,14 @@ header h1 {
     margin-top: 20px;
     margin-left: 5px;
     font-size: 25px;
+}
+header h1:hover{
+    color: rgb(102, 126, 222);
     cursor: pointer;
 }
 
 nav {
-    margin-top: 10px; /* Add some space between the header and nav */
+    margin-top: 10px; 
 }
 
 nav ul {
@@ -155,11 +170,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: rgb(89, 131, 195);
+    color: rgb(102, 126, 222);
 }
 
 nav ul li a:focus {
-    outline: 2px solid rgb(89, 131, 195);
+    outline: 2px solid rgb(102, 126, 222);
 }
 
 
@@ -174,8 +189,13 @@ main {
     color: white;
 }
 
+
 h2 {
     font-weight: normal;
+}
+h2:hover{
+    color: rgb(102, 126, 222);
+    cursor: pointer;
 }
 
 .media-box {
@@ -291,7 +311,6 @@ h2 {
     background-color: rgba(0, 0, 0, 0);
     border-radius: 15px;
     transition: background-color 0.2s ease;
-    z-index: 1;
 }
 
 /* Box hover effects for overlay */
@@ -307,7 +326,6 @@ h2 {
     transform: translateX(-50%);
     text-align: center;
     width: 100%;
-    z-index: 3;
 }
 
 #next-up .media-title {
@@ -317,6 +335,11 @@ h2 {
     margin: 0;
     margin-top: 10px;
 }
+#next-up .media-title:hover{
+    color: rgb(102, 126, 222);
+    cursor: pointer;
+}
+
 
 #next-up .media-description {
     font-size: 12px;
@@ -348,6 +371,7 @@ h2 {
     color: white;
     margin-left: 20px;
 }
+
 
 #recently-added-movies h2 {
     margin-bottom: 20px;
@@ -420,10 +444,14 @@ h2 {
     word-wrap: break-word;
     word-break: break-word;
 }
+#recently-added-movies .media-title:hover{
+    color: rgb(102, 126, 222);
+    cursor: pointer;
+}
 
 #recently-added-movies .media-year {
-    font-size: 12px;
-    color: rgb(182, 182, 182);
+    font-size: 13px;
+    color: rgb(204, 203, 203);
     margin-top: 25px;
 }
 
@@ -516,10 +544,14 @@ h2 {
     word-wrap: break-word;
     word-break: break-word;
 }
+#recently-added-tv-shows .media-title:hover{
+    color: rgb(102, 126, 222);
+    cursor: pointer;
+}
 
 #recently-added-tv-shows .media-year {
-    font-size: 12px;
-    color: rgb(182, 182, 182);
+    font-size: 13px;
+    color: rgb(204, 203, 203);
     margin-top: 25px;
 }
 
