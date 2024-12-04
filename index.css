@@ -181,6 +181,7 @@ nav ul li a:focus {
 main {
     padding: 20px;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 #my-media {
@@ -260,24 +261,79 @@ h2:hover{
 
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
+    /* Navigation adjustments */
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: center;
+        gap: 20px;
     }
-
+    
     nav ul li {
         margin: 10px 0;
     }
 
-    .media-box {
+    /* Global section title alignment */
+    #next-up h2{
+        text-align: center;
         width: 100%;
-        height: auto;
+        margin-bottom: 30px;
+        margin-right: 20px;
+    }
+
+    /* My Media section responsive styles */
+    #my-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px; 
+        margin: 20px 0;
+        box-sizing: border-box;
+    }
+
+    #my-media .media-box {
+        width: 320px;
+        height: 180px;
+        margin: 0 0 40px 0;
+    }
+
+    #next-up .media-box {
+        width: 320px;
+        height: 180px;
+        margin: 20px 0 60px 0;
+    }
+
+    /* Recently Added sections responsive styles */
+    #recently-added-movies, #recently-added-tv-shows {
+        padding: 0 20px;
+        box-sizing: border-box;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #recently-added-movies .media-container,
+    #recently-added-tv-shows .media-container {
+        display: flex;
+        overflow-x: auto;
+        padding: 20px 0;
+        gap: 25px;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #recently-added-movies .media-box,
+    #recently-added-tv-shows .media-box {
+        flex: 0 0 170px;
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 }
+
+
+
+
 
 /* Next Up Section */
 #next-up {
@@ -297,6 +353,7 @@ h2:hover{
     background-position: center;
     border-radius: 15px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding-top: 20px;
 }
 
 
@@ -355,15 +412,6 @@ h2:hover{
     background-image: url('images/game-of-thrones-4f78ce73d617c.jpg');
 }
 
-/* Responsive Design for Next Up section */
-@media (max-width: 768px) {
-    #next-up .media-box {
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}
 
 /* Recently added Movies section */
 #recently-added-movies {
@@ -453,15 +501,6 @@ h2:hover{
     font-size: 13px;
     color: rgb(204, 203, 203);
     margin-top: 25px;
-}
-
-#recently-added-movies .media-container::-webkit-scrollbar {
-    display: none;
-}
-
-#recently-added-movies .media-container {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
 /* Recently added TV Shows section */
@@ -555,6 +594,8 @@ h2:hover{
     margin-top: 25px;
 }
 
+/*Scrolling Elements*/
+
 #recently-added-tv-shows .media-container::-webkit-scrollbar, #recently-added-movies .media-container::-webkit-scrollbar {
     display: none;
 }
@@ -563,5 +604,6 @@ h2:hover{
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 
 
