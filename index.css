@@ -23,7 +23,9 @@
 .play-button:hover{
     color: rgb(102, 126, 222);
     cursor: pointer;
-    transition: color 0.15s;
+    transition: color 0.15 ease-in-out ;
+    transform: scale(1.3);
+    transition: transform 0.15s ease-in-out;
 }
 
 .media-box:hover .play-button {
@@ -47,7 +49,9 @@
 .icons-container i:hover{
     color: rgb(102, 126, 222);
     cursor: pointer;
-    transition: color 0.15s;
+    transition: color 0.15 ease-in-out ;
+    transform: scale(1.3);
+    transition: transform 0.15s ease-in-out;
 }
 
 /* Keyframes for background image rotation */
@@ -110,7 +114,9 @@ body {
 .header-icons-right i:hover{
     color: rgb(102, 126, 222);
     cursor: pointer;
-    transition: color 0.15s;
+    transition: color 0.15 ease-in-out ;
+    transform: scale(1.3);
+    transition: transform 0.15s ease-in-out;
 }
 
 .header-icons {
@@ -126,7 +132,12 @@ body {
 .header-icons i:hover{
     color: rgb(102, 126, 222);
     cursor: pointer;
-    transition: color 0.15s;
+    transition: color 0.15 ease-in-out ;
+    transform: scale(1.3);
+    transition: transform 0.15s ease-in-out;
+}
+.header-icons img{
+    cursor: pointer;
 }
 
 .jellyfin-icon {
@@ -149,7 +160,9 @@ header h1 {
 header h1:hover{
     color: rgb(102, 126, 222);
     cursor: pointer;
-    transition: color 0.15s;
+    transition: color 0.15 ease-in-out ;
+    transform: scale(1.15);
+    transition: transform 0.15s ease-in-out;
 }
 
 nav {
@@ -176,7 +189,9 @@ nav ul li a {
 
 nav ul li a:hover {
     color: rgb(102, 126, 222);
-    transition: color 0.15s;
+    transition: color 0.15 ease-in-out ;
+    transform: scale(1.15);
+    transition: transform 0.15s ease-in-out;
 }
 
 
